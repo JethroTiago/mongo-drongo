@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Peralta&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
     font-family: 'Peralta';
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -16,22 +16,23 @@ main {
     margin-top: 2%;
 }
 
-.lateral {
+.lateral-esquerda {
+    width: 40%;
     float: left;
-    padding: 20px;
+    padding: 1vw 5vw 0 5vw;
 }
 
 .titulo {
     color: white;
-    font-size: 40px;
+    font-size: 3vw;
 }
 
 .subtitulo {
     color: white;
-    font-size: 30px;
+    font-size: 2vw;
 }
 
-.MongoDrongo {
-    width: 100%;
+.mongo-drongo {
     max-width: 300px;
+    width: 100%;
 }
