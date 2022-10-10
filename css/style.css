@@ -8,18 +8,33 @@
 }
 
 body {
-    text-align: center;
-    background: linear-gradient(to bottom, #6ab7f5, #ffffff);
+    background: linear-gradient(to bottom, #5cb1f6, #ffffff);
     min-height: 100vh;
 }
 
 main {
-    display: inline-block;
+    display: flex;
     margin-top: 2%;
     padding: 15px;
 }
 
+.titulo {
+    color: white;
+    font-size: 40px;
+}
+
+.subtitulo {
+    color: white;
+    font-size: 30px;
+}
+
 .MongoDrongo {
     width: 100%;
-    max-width: 400px;
+    max-width: 300px;
+}
+
+.tabuleiro {
+    width: 1000px;
+    height: 1000px;
+    color: red;
 }
