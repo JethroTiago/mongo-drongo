@@ -1,0 +1,32 @@
+.corpo {
+    height: 100vh;
+    display: flex;
+    background: Pink;
+    border-radius: 10px;
+    margin-left: 80px;
+}
+
+.jogo-memoria {
+    width: 600px;
+    height: 500px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cartao-memoria {
+    width: calc(25% - 10px);
+    height: calc(30% - 10px);
+    margin: 5px;
+    position: relative;
+}
+
+.cartao-frente,
+.cartao-fundo {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    position: absolute;
+    border-radius: 5px;
+    
+}

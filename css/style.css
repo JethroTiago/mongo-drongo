@@ -10,6 +10,7 @@
 body {
     background: linear-gradient(to bottom, #5cb1f6, #ffffff);
     min-height: 100vh;
+    display: flex;
 }
 
 main {
