@@ -6,7 +6,7 @@ A fun memory game with the adorable characters of the Mongo and Drongo cartoon s
 
 ### Project Preview:
 
--- soon --
+![Mongo e Drongo Print](https://user-images.githubusercontent.com/103612874/194896429-b5706504-a0c0-40ef-bfa0-e791caf7debe.jpg)
 
 ## How it works
 
