@@ -1,43 +1,55 @@
 const cartoes = document.querySelectorAll('.cartao-memoria');
 
 let cartaoFoiVirado = false;
+let travaJogo = false
 let primeiroCartao, segundoCartao;
 
 function virarCartao() {
+    if (travaJogo) return;
+    if (this === primeiroCartao) return;
     this.classList.add('flip');
 
-    if(!cartaoFoiVirado){
+    if (!cartaoFoiVirado) {
         cartaoFoiVirado = true;
         primeiroCartao = this;
         return;
     }
 
     segundoCartao = this;
-    cartaoFoiVirado = false;
+    travaJogo = true;
 
     checarSeIgual();
-
-    function checarSeIgual() {
-        if(primeiroCartao.dataset.estrutura === segundoCartao.dataset.estrutura) {
-            disativaCartas();
-            return;
-        }
-
-    desviraCartao();
-
-    }
-
-    function desativaCartas() {
-        primeiroCartao.removeEventListner('click', flipCard);
-        segundoCartao,removeEventListener('click', flipCard)
-    }
-
-    function desativaCartas() {
-        setTimeout(() => {
-            primeiroCartao.classList.remove('flip');
-            segundoCartao.classList.remove('flip');
-        }, 1500);
-    }
 }
+
+function checarSeIgual() {
+    let saoIguais = primeiroCartao.dataset.estrutura === segundoCartao.dataset.estrutura;
+    saoIguais ? desativaCartas() : desviraCartao();
+}
+
+function desativaCartas() {
+    primeiroCartao.removeEventListener('click', virarCartao);
+    segundoCartao, removeEventListener('click', virarCartao);
+    resetarJogo();
+}
+
+function desviraCartao() {
+    setTimeout(() => {
+        primeiroCartao.classList.remove('flip');
+        segundoCartao.classList.remove('flip');
+        resetarJogo();
+    }, 1500);
+}
+
+function resetarJogo() {
+    [cartaoFoiVirado, travaJogo] = [false, false];
+    [primeiroCartao, segundoCartao] = [null, null];
+}
+
+(function embaralhar() {
+    cartoes.forEach(cartao => {
+        let posicaoAleatoria = Math.floor(Math.random() * 12);
+        cartao.style.order = posicaoAleatoria;
+    });
+})();
 
 cartoes.forEach(cartao => cartao.addEventListener('click', virarCartao));
