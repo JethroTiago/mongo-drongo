@@ -4,7 +4,11 @@ Um jogo da memória bem divertido com os adoráveis personagens do desenho anima
 
 A fun memory game with the adorable characters of the Mongo and Drongo cartoon show.
 
-### Project Preview:
+### Deploy
+
+http://mongo-drongo.vercel.app/
+
+### Project Preview
 
 ![Mongo e Drongo Print](https://user-images.githubusercontent.com/103612874/194896429-b5706504-a0c0-40ef-bfa0-e791caf7debe.jpg)
 
