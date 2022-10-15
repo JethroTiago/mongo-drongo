@@ -1,10 +1,13 @@
 const cartoes = document.querySelectorAll('.cartao-memoria');
+const audio = new Audio('/assets/sounds/FlipSound.mp3')
 
 let cartaoFoiVirado = false;
 let travaJogo = false
 let primeiroCartao, segundoCartao;
 
 function virarCartao() {
+    audio.play();
+    audio.playbackRate = 2;
     if (travaJogo) return;
     if (this === primeiroCartao) return;
     this.classList.add('flip');
