@@ -49,3 +49,16 @@
 .cartao-frente {
     transform: rotateY(180deg);
 }
+
+@media (max-width: 425px) {
+    .mesa {
+        margin: auto;
+        width: 90vw;
+        height: 90vw;
+    }
+
+    .jogo-memoria {
+        width: 90vw;
+        height: 76vw;
+    }
+}

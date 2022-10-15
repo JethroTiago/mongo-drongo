@@ -36,3 +36,25 @@ main {
     margin: 0 auto;
     width: 85%;
 }
+
+@media (max-width: 425px) {
+
+    .lateral-esquerda {
+        float: unset;
+        text-align: center;
+        width: auto;
+    }
+
+    .titulo {
+        font-size: 5.5vw;
+    }
+
+    .subtitulo {
+        font-size: 3.5vw;
+        margin-bottom: 5vw;
+    }
+
+    .mongo-drongo {
+        display: none;
+    }
+}
