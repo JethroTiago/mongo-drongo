@@ -37,7 +37,7 @@ main {
     width: 85%;
 }
 
-@media (max-width: 425px) {
+@media (max-width: 500px) {
 
     .lateral-esquerda {
         float: unset;
