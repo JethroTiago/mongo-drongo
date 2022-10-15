@@ -1,13 +1,15 @@
 const cartoes = document.querySelectorAll('.cartao-memoria');
-const audio = new Audio('/assets/sounds/FlipSound.mp3')
+const cardFlip = new Audio('/assets/sounds/FlipSound.mp3')
+const jacaTorta = new Audio('/assets/sounds/JacaTorta.mp3')
+const aduide = new Audio('/assets/sounds/Aduide.mp3')
 
 let cartaoFoiVirado = false;
 let travaJogo = false
 let primeiroCartao, segundoCartao;
 
 function virarCartao() {
-    audio.play();
-    audio.playbackRate = 2;
+    cardFlip.play();
+    cardFlip.playbackRate = 2;
     if (travaJogo) return;
     if (this === primeiroCartao) return;
     this.classList.add('flip');
@@ -26,10 +28,11 @@ function virarCartao() {
 
 function checarSeIgual() {
     let saoIguais = primeiroCartao.dataset.estrutura === segundoCartao.dataset.estrutura;
-    saoIguais ? desativaCartas() : desviraCartao();
+    saoIguais ? desativaCartas() : desviraCartao(jacaTorta.play());
 }
 
 function desativaCartas() {
+    aduide.play();
     primeiroCartao.removeEventListener('click', virarCartao);
     segundoCartao, removeEventListener('click', virarCartao);
     resetarJogo();
