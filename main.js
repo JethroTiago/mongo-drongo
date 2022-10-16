@@ -1,10 +1,11 @@
 const cartoes = document.querySelectorAll('.cartao-memoria');
-const cardFlip = new Audio('/assets/sounds/FlipSound.mp3')
-const jacaTorta = new Audio('/assets/sounds/JacaTorta.mp3')
-const aduide = new Audio('/assets/sounds/Aduide.mp3')
+const timer = document.querySelector('.timer');
+const cardFlip = new Audio('/assets/sounds/FlipSound.mp3');
+const jacaTorta = new Audio('/assets/sounds/JacaTorta.mp3');
+const aduide = new Audio('/assets/sounds/Aduide.mp3');
 
 let cartaoFoiVirado = false;
-let travaJogo = false
+let travaJogo = false;
 let primeiroCartao, segundoCartao;
 
 function virarCartao() {
@@ -57,5 +58,26 @@ function resetarJogo() {
         cartao.style.order = posicaoAleatoria;
     });
 })();
+
+const iniciarTempo = () => {
+    setInterval(() => {
+        const tempoAtual = Number(timer.innerHTML);
+        timer.innerHTML = tempoAtual +1;
+    }, 1000)
+}
+
+/*const fimDoJogo = () => {
+    const todasCartasViradas = document.querySelectorAll('.cartao-memoria');
+
+    if(todasCartasViradas.length === 16) {
+        alert(`Parabéns, jogador! Seu tempo foi: ${timer.innerHTML}`);
+    }
+}
+
+fimDoJogo();*/
+
+window.onload = () => {
+    iniciarTempo();
+}
 
 cartoes.forEach(cartao => cartao.addEventListener('click', virarCartao));
