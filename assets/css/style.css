@@ -25,11 +25,13 @@ main {
 .titulo {
     color: white;
     font-size: 3vw;
+    text-shadow: .1em .1em #33333391
 }
 
 .subtitulo {
     color: white;
     font-size: 2vw;
+    text-shadow: .1em .1em #33333391
 }
 
 .mongo-drongo {
